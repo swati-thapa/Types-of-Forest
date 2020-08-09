@@ -1,0 +1,120 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<!-- Website Title -->
+<body>
+    <div class="login">
+	<h1>Types of Forest</h1>
+<form action="{{url_for('predict')}}" method ="post">
+  <div>
+    <label>Elevation(meters)</label>
+    <br>
+    <input type="text" name="Elevation(meters)">
+    <br>
+    <label>Aspect(degrees)</label>
+    <br>
+    <input type="text" name="Aspect(degrees)">
+    <br>
+    <label>Slope(degrees)</label>
+    <br>
+    <input type="text" name="Slope(degrees)">
+    <br>
+    <label class="center ">Horizontal Distance To Hydrology(meters)</label>
+    <br>
+    <input type="text" name="Horizontal Distance To Hydrology(meters)">
+    <br>
+    <label>Vertical Distance To Hydrology(meters)</label>
+    <br>
+    <input type="text" name="Vertical Distance To Hydrology(meters)">
+    <br>
+    <label>Horizontal Distance To Roadways(meters)</label>
+    <br>
+    <input type="text" name="Horizontal Distance To Roadways(meters)">
+    <br>
+    <label>Hillshade 9am</label>
+    <br>
+    <input type="text" name="Hillshade 9am">
+    <br>
+    <label>Hillshade Noon</label>
+    <br>
+    <input type="text" id="c_loss6" name="Hillshade Noon">
+    <br>
+    <label>Hillshade 3pm</label>
+    <br>
+    <input type="text" id="c_loss7" name="Hillshade 3pm">
+    <br>
+    <label>Horizontal Distance To Fire Points(meters)</label>
+    <br>
+    <input type="text" id="c_loss8" name="Horizontal Distance To Fire Points(meters)">
+    <br>
+    <label>Soil Type</label>
+    <br>
+    <select name="Soil Type">
+      <option value="0">Cathedral Family</option>
+      <option value="1">Bullwark(outcrop complex)</option>
+      <option value="2">Bullwark(land complex)</option>
+      <option value="3">Legault family</option>
+      <option value="4">Catamount family</option>
+      <option value="5">Pachic Argiborolis</option>
+      <option value="6">Cryaquolis</option>
+      <option value="7">Gateview family</option>
+      <option value="8">Rogert family</option>
+      <option value="9">Typic Cryaquolis(Borohemists complex)</option>
+        <option value="10">Vanet</option>
+      <option value="11">Typic Cryaquepts(Typic Cryaquolls complex)</option>
+      <option value="12">Typic Cryaquolls(Leighcan family, till substratum complex)</option>
+      <option value="13">Leighcan family(extremely boulder)</option>
+      <option value="14"> Leighcan family(Typic Cryaquolls complex)</option>
+      <option value="15">Leighcan family(extremely stony)</option>
+      <option value="16">Leighcan family(warm, extremely stony)</option>
+      <option value="17">Granile</option>
+      <option value="18">Leighcan family(warm - Rock outcrop complex, extremely stony)</option>
+      <option value="19">Leighcan family(Rock outcrop complex, extremely stony)</option>
+        <option value="20">Como(Legault families complex, extremely stony)</option>
+      <option value="21">Haploborolis</option>
+      <option value="22">Como family(Rock land - Legault family complex, extremely stony)</option>
+      <option value="23">Leighcan(Catamount families complex, extremely stony)</option>
+      <option value="24">Catamount family(Rock outcrop)</option>
+      <option value="25">Leighcan(Catamount families - Rock outcrop complex, extremely stony)</option>
+      <option value="26">Cryorthents</option>
+      <option value="27">Cryumbrepts</option>
+      <option value="28">Bross family</option>
+      <option value="29">Rock outcrop</option>
+        <option value="30">Leighcan</option>
+      <option value="31">Moran family(Cryorthents - Leighcan family complex, extremely stony)</option>
+      <option value="32">Ratake family</option>
+      <option value="33">Moran family(Cryorthents - Rock land complex, extremely stony)</option>
+      <option value="34">Vanet family(Rock outcrop complex, rubble)</option>
+      <option value="35">Vanet(Wetmore families - Rock outcrop complex, stony)</option>
+      <option value="36">Gothic family</option>
+      <option value="37">Supervisor</option>
+      <option value="38">Troutville family</option>
+    </select>
+    <br>
+    <label>Wilderness Area</label>
+    <br>
+    <select name="Wilderness Area">
+      <option value="0">Rawah</option>
+      <option value="1">Neota</option>
+      <option value="2">Comanche Peak</option>
+      <option value="3">Cache la Poudre</option>
+    </select>
+    <br>
+    <br>
+
+    <button type="submit">Predict</button>
+      <br>
+
+     <br>
+
+
+  {{ cover_type }}
+  </div>
+</form>
+    </div>
+</body>
+</html>
